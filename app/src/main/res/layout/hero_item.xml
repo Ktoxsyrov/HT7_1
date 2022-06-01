@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="heroData"
+            type="com.example.ht5.model.Hero" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#eeeeee"
+        >
+
+        <View
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#aaaaaa"
+            />
+
+<!--                    app:loadImage ='@{heroData.img}'
+-->
+        <ImageView
+            android:id="@+id/heroAvatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:src="@drawable/agi"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:text='@{heroData.localized_name}'
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/heroAvatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Anti Mage" />
+
+        <ImageView
+            android:id="@+id/primaryAttr"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            tools:src="@drawable/intell" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
