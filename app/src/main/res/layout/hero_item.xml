@@ -20,7 +20,8 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="500dp"
             android:layout_height="2dp"
             android:background="#aaaaaa"
             />
@@ -39,8 +40,8 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="250dp"
-            android:layout_height="35dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:text='@{heroData.localized_name}'
             android:textSize="25sp"
@@ -52,10 +53,11 @@
 
         <ImageView
             android:id="@+id/primaryAttr"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             app:layout_constraintBottom_toBottomOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toTopOf="@+id/textView"
             tools:src="@drawable/intell" />
 
